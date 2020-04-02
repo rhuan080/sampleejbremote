@@ -3,8 +3,10 @@
 This repository has an example of how to create an EJB remote and expose it using JBoss EAP/Wildfly. It is composed by these components:
 
  -**sampleejbservice**: EJB remote service that expose a remote interface and has a unit test to test them.
+ 
+## EJB SERVICE
 
-## BUILDING PROJECT
+### BUILDING PROJECT
 
 To build project go to `$HOME_SAMPLEEJBSERVICE` and execute this Maven command:
 
@@ -12,7 +14,7 @@ To build project go to `$HOME_SAMPLEEJBSERVICE` and execute this Maven command:
 
 Note the `-DskipTests` property is used, because it expect the EJB remote service is already deployed and available at http://localhost:8080.
 
-## DEPLOYING IN THE JBOSS EAP/WILDFLY
+### DEPLOYING IN THE JBOSS EAP/WILDFLY
 
 Copy the war file to `$HOME_WILDFLY/standalone/deployments` . 
 
@@ -28,8 +30,9 @@ Note that the application will print the JNDIs in log file and log console.
 	java:app/sampleejbservice-1.0-SNAPSHOT/HelloWorld
 	java:module/HelloWorld
 
+## EJB CLIENT
 
-## TESTING STANDALONE JAVA APPLICATION APPROACH
+### TESTING STANDALONE JAVA APPLICATION APPROACH
 
 This is an unit test that connect to EJB remote deployed in the step above, call a function passing a parameter and receive a response from EJB remote. Note that to run this test you should be already deployed the war. This test has two type of parameters, one can be passed as JVM parameter e other that is static parameter. These are the JVM parameter that can be passed when running this test:
 
@@ -47,4 +50,4 @@ To test we should execute the Maven command above passing the parameters that we
 Note that we should replace the {number} to some number.
 
 
-##  TESTING SERVER TO SERVER APPROACH 
+###  TESTING SERVER TO SERVER APPROACH 
