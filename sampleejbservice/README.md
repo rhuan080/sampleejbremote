@@ -6,7 +6,7 @@ This repository has an example of how to create an EJB remote and expose it usin
 
 ## BUILDING PROJECT
 
-To build project go to `$HOME_PROJECT` and execute this Maven command:
+To build project go to `$HOME_SAMPLEEJBSERVICE` and execute this Maven command:
 
     mvn clean package -DskipTests
 
@@ -16,7 +16,7 @@ Note the `-DskipTests` property is used, because it expect the EJB remote servic
 
 Copy the war file to `$HOME_WILDFLY/standalone/deployments` . 
 
-    cp $HOME_PROJECT/target/sampleejbservice-1.0-SNAPSHOT.war .$HOME_WILDFLY/standalone/deployments/
+    cp $HOME_SAMPLEEJBSERVICE/target/sampleejbservice-1.0-SNAPSHOT.war .$HOME_WILDFLY/standalone/deployments/
 Note that the application will print the JNDIs in log file and log console.
 
 	java:global/sampleejbservice-1.0-SNAPSHOT/HelloWorld!net.rhuanrocha.sampleejbservice.ejb.HelloWorldRemote
